@@ -1,9 +1,10 @@
 import { EntityRepository, Repository } from 'typeorm';
 import { User } from './user.entity';
 import { AuthCredentialsDto } from './dto/auth-credentials.dto';
-import { ERROR_CODE_DUPLICATED_USERNAME } from 'src/consts';
 import { ConflictException, InternalServerErrorException } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
+
+const ERROR_CODE_DUPLICATED_USERNAME = '23505';
 
 @EntityRepository(User)
 export class UserRepository extends Repository<User> {

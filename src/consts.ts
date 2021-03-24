@@ -1,1 +1,0 @@
-export const ERROR_CODE_DUPLICATED_USERNAME = '23505';
